@@ -54,3 +54,8 @@ p.higher {
 p.one {
   color: #CC0000;
 }
+
+.control-button {
+  font-size: 20px;
+}
+}
