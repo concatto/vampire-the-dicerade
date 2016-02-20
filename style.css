@@ -32,6 +32,7 @@ p.random-number {
 
 #buttons input {
   padding: 6px 16px;
+  vertical-align: top;
 }
 
 #difficulty-container {
@@ -56,5 +57,6 @@ p.one {
 }
 
 #buttons input.control-button {
-  font-weight: bold;
+  font-size: 16px;
+  padding: 4px 14px;
 }
