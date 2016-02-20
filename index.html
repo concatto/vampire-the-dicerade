@@ -17,7 +17,7 @@
             
             if (value === 1) {
               $(this).addClass("one");
-            } else if (value >= parseInt($("#difficulty").text())) {
+            } else if (value >= parseInt($("#difficulty").val())) {
               $(this).addClass("higher");
             }
           });
