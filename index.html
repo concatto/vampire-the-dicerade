@@ -11,7 +11,7 @@
       $(function() {
         $("#roll-button").on("click", function() {
           $(".random-number").each(function(index, element) {
-            $(this).removeClass();
+            $(this).removeClass("one higher");
             var value = roll();
             $(this).text(value);
             
