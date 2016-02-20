@@ -1,5 +1,5 @@
 body {
-  background-color: #999999;
+  background-color: #2D2848;
   margin: 0;
   padding: 0;
 }
@@ -9,5 +9,10 @@ p {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 34px;
+}
+
+#root {
+  text-align: center;
+  margin: 16px;
 }
