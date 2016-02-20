@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Vampire: The Dicerade</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+      function roll() {
+        return Math.round(Math.random() * 19) + 1;
+      }
+      
+      $(function() {
+        $("#roll-button").on("click", function() {
+          $("#random-number").text(roll());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="random-number">0</p>
+    <input type="button" id="#roll-button" value="Roll!"/>
+  </body>
+</html>
