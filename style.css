@@ -29,3 +29,23 @@ p.random-number {
   margin: 0px 6px;
   width: 20px;
 }
+
+#buttons input {
+  padding: 6px 16px;
+}
+
+#difficulty-container {
+  margin-top: 10px;
+}
+
+#difficulty {
+  width: 30px;
+}
+
+p.higher {
+  color: #00CC00;
+}
+
+p.one {
+  color: #CC0000;
+}
