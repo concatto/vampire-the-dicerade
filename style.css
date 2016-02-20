@@ -1,0 +1,13 @@
+body {
+  background-color: #999999;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+.title {
+  font-size: 30px;
+}
