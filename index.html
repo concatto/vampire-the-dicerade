@@ -5,12 +5,38 @@
     <link rel="stylesheet" href="style.css">
     <script>
       function roll() {
-        return Math.round(Math.random() * 19) + 1;
+        return Math.round(Math.random() * 9) + 1;
       }
       
       $(function() {
         $("#roll-button").on("click", function() {
-          $("#random-number").text(roll());
+          $(".random-number").each(function(index, element) {
+            $(this).text(roll());
+          });
+        });
+        
+        $("#minus-button").on("click", function() {
+          $(".random-number").last().remove();
+          
+          if ($(".random-number").length == 1) {
+            $("#minus-button").attr("disabled", "disabled");
+          }
+          
+          if ($(".random-number").length < 10) {
+            $("#plus-button").removeAttr("disabled");
+          }
+        });
+        
+        $("#plus-button").on("click", function() {
+          $("#numbers").append("<p class=\"random-number\">0</p>");
+          
+          if ($(".random-number").length == 10) {
+            $("#plus-button").attr("disabled", "disabled");
+          }
+          
+          if ($(".random-number").length > 1) {
+            $("#minus-button").removeAttr("disabled");
+          }
         });
       });
     </script>
@@ -18,8 +44,14 @@
   <body>
     <div id="root">
       <p class="title">Vampire: The Dicerade</p>
-      <p id="random-number">0</p>
-      <input type="button" id="roll-button" value="Roll!"/>
+      <div id="numbers">
+        <p class="random-number">0</p>
+      </div>
+      <div id="buttons">
+        <input type="button" id="minus-button" value="-"/>
+        <input type="button" id="roll-button" value="Roll!"/>
+        <input type="button" id="plus-button" value="+"/>
+      </div>
     </div>
   </body>
 </html>
